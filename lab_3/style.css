@@ -1,0 +1,62 @@
+/* C00001754 John Paul Larkin */
+
+body {
+  background-color: #5c5757;
+}
+
+.home-heading {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.pic {
+  position: absolute;
+  width: 30rem;
+  top: 200px;
+  left: 400px;
+}
+
+nav ul {
+  background-color: #333;
+  height: 30px;
+  padding: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  font-size: 2em;
+  text-decoration: none;
+  margin-right: 2rem;
+  display: inline-block;
+  color: rgb(218, 199, 199);
+  background-color: #5c5757;
+  padding: 0.1rem;
+  border-radius: 0.5rem;
+}
+
+nav ul li a:hover {
+  background-color: #786c6c;
+}
+
+table {
+  border: 6px solid #1c4868;
+  background-color: #cbce8e;
+  color: #3e3a40;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+  font-size: 3em;
+}
+
+th {
+  background-color: #959db7;
+  text-align: center;
+  font-size: 3rem;
+}
+
+td {
+  border: 2px solid #1c4868;
+}

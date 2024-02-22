@@ -1,0 +1,146 @@
+/* C00001754 */
+/* John Paul larkin */
+/* 22/2/2024 */
+
+body {
+  min-height: 100vh;
+}
+
+html {
+  background: radial-gradient(circle, #1e40af, #2563eb);
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    background: radial-gradient(circle, #6e41cf, #1250d7);
+  }
+}
+
+/* Home page styles */
+
+.home h1 {
+  text-align: center;
+}
+
+.home p {
+  max-width: 30rem;
+  margin: auto;
+}
+
+.home figure {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home img {
+  max-width: 50%;
+  transition: transform 0.3s ease;
+}
+
+.home figcaption {
+    margin-top: .5rem;
+    padding:.5rem;
+    background-color: aliceblue;
+}
+
+.home img:hover {
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.home img:active {
+  transform: rotate(90deg);
+}
+
+/* Info page styles */
+
+.info table {
+  border: 6px solid #1c4868;
+  background-color: #cbce8e;
+  color: #3e3a40;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+  font-size: 3em;
+}
+
+.info th {
+  background-color: #959db7;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.info td {
+  border: 2px solid #1c4868;
+}
+
+.info td:hover {
+  background-color: blue;
+  color: white;
+}
+
+.info td:active {
+  background-color: blue;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .info table {
+    margin: auto;
+    width: 95%;
+    font-size: 1em;
+    word-break: break-all;
+  }
+  .info th {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .info table {
+    margin: auto;
+    width: 95%;
+    font-size: 1.2em;
+  }
+}
+
+/* Media page styles */
+
+.media iframe {
+  position: relative;
+  width: 80%;
+  height: 800px;
+}
+
+.frame-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Nav bar styles */
+
+nav ul {
+  background-color: #333;
+  height: 30px;
+  padding: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  font-size: 2em;
+  text-decoration: none;
+  margin-right: 2rem;
+  display: inline-block;
+  color: rgb(218, 199, 199);
+  background-color: #5c5757;
+  padding: 0.1rem;
+  border-radius: 0.5rem;
+}
+
+nav ul li a:hover {
+  background-color: #786c6c;
+}
