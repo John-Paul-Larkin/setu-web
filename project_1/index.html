@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style-nav.css" />
 
     <title>Home</title>
     <!-- C00001754 -->
@@ -11,7 +12,7 @@
     <!-- Project Part 1 20% -->
     <!-- 26/2/2024 -->
 
-    <!-- Roboto from link from fonts.google.com -->
+    <!-- Roboto font link from fonts.google.com -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,5 +20,24 @@
       rel="stylesheet"
     />
   </head>
-  <body></body>
+  <body>
+    <!-- Navigation bar -->
+    <header class="header">
+      <!-- Logo -->
+      <a href="https://www.setu.ie/" class="logo">
+        <img src="./images/setu-logo.svg" alt="SETU logo" />
+      </a>
+      <!-- Hamburger icon -->
+      <input class="checkbox" type="checkbox" id="checkbox" />
+      <label class="hamburger" for="checkbox"><span class="hamburger-line"></span></label>
+      <!-- Menu -->
+      <nav class="nav">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+          <li><a href="#">About me</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>
