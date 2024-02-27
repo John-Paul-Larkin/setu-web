@@ -1,13 +1,14 @@
-.nav-container {
-  max-width: 1400px;
-  margin: auto;
-}
 
 .header {
   background-color: var(--black);
   box-shadow: 1px 1px 5px 0px var(--black);
   top: 0;
   width: 100%;
+}
+.nav-container {
+  max-width: 1400px;
+  margin: auto;
+
 }
 
 /* Logo */
@@ -29,6 +30,8 @@
   position: fixed;
   background-color: var(--black);
   overflow: hidden;
+  z-index:2;
+
 }
 .nav ul a {
   display: block;
@@ -110,16 +113,14 @@
 @media (min-width: 630px) {
   .nav {
     max-height: none;
-    /* top: 0; */
     position: relative;
     float: right;
     width: fit-content;
-    /* background-color: aqua; */
-    /* height: 5rem; */
   }
   .nav ul li {
     float: left;
   }
+
   .nav ul a:hover {
     background-color: transparent;
     color: var(--gray);
@@ -127,6 +128,19 @@
 
   .hamburger {
     display: none;
+  }
+}
+
+@media (min-width: 850px) {
+  .logo img {
+    height: 6rem;
+  }
+  .nav ul a {
+    font-size: 1.7rem;
+  }
+
+  .nav {
+    margin-top: 1rem;
   }
 }
 
