@@ -87,13 +87,34 @@ ul {
 }
 
 .modules {
-    background-color: pink;
-    height: 30rem;
+  background-color: pink;
+  padding: 2rem;
+  margin: auto;
+}
+
+table {
+  /* background-color: #c10d0d; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modules th:first-child {
+  text-align: left;
+  /* padding-right: 1em; */
 }
 
 .testimonial-wrapper {
   background-color: #f9f9f9;
   overflow: hidden;
+}
+
+tr > td {
+  border-right: 1px solid black;
+}
+
+tr td:not(:first-child) {
+  text-align: center;
+  background-color: aliceblue;
 }
 
 .testimonial {
@@ -201,6 +222,9 @@ ul {
     top: 14rem;
     right: 6rem;
   }
+  tr td:not(:first-child) {
+    width: 10rem;
+  }
 }
 
 @media (min-width: 800px) {
@@ -222,14 +246,14 @@ ul {
   }
 
   .course-description p {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     padding-left: 0;
     margin-top: auto;
     margin-bottom: auto;
   }
 
   .calendar p {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 
   .testimonial img {
@@ -238,6 +262,10 @@ ul {
 
   .speech-bubble img {
     height: 25rem;
+  }
+
+  .modules {
+    font-size: 1.6rem;
   }
 }
 
