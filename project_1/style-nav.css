@@ -1,11 +1,11 @@
-/* Full transparency - I modified this nav from a different project I built previously */
-/* At that time i probably learned it from some tutorial */
-/* I 100% understand the code and could easily recreate it */
+.nav-container {
+  max-width: 1400px;
+  margin: auto;
+}
 
 .header {
   background-color: var(--black);
   box-shadow: 1px 1px 5px 0px var(--black);
-  position: fixed;
   top: 0;
   width: 100%;
 }
