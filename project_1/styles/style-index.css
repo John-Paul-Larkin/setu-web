@@ -1,5 +1,3 @@
-
-
 /* Here I have two backgrounds  */
 /* This darkens the background without also darkening the overlaying text  */
 /* Z-index was nescessary here to counteract stacking context  */
@@ -31,7 +29,7 @@
 }
 
 .course-description {
-  background-color: white;
+  background-color: var(--white);
   padding: 1rem;
 }
 
@@ -54,24 +52,22 @@
 }
 
 .modules {
-  background-color: pink;
+  background-color: var(--pink);
   padding: 2rem;
   margin: auto;
 }
 
 table {
-  /* background-color: #c10d0d; */
   margin-left: auto;
   margin-right: auto;
 }
 
 .modules th:first-child {
   text-align: left;
-  /* padding-right: 1em; */
 }
 
 .testimonial-wrapper {
-  background-color: #f9f9f9;
+  background-color: var(--white);
   overflow: hidden;
 }
 
@@ -81,16 +77,12 @@ tr > td {
 
 tr td:not(:first-child) {
   text-align: center;
-  background-color: aliceblue;
+  background-color: var(--white);
 }
 
 .testimonial {
-  /* height: 40rem; */
   position: relative;
-  /* display: flex;
-  align-items: center;
-  justify-content: flex-start; */
-  background-color: #f9f9f9;
+  background-color: var(--white);
   z-index: 1;
   overflow: hidden;
 }
@@ -106,17 +98,17 @@ tr td:not(:first-child) {
   width: 40rem;
   height: 40rem;
   border-radius: 50%;
-  background-color: aqua;
+  background-color: var(--green);
   z-index: -1;
   transform: translatey(-50%);
 }
 
 .speech-bubble {
   position: relative;
-  top: -5rem;
+  top: -2rem;
   height: 15rem;
   width: 25rem;
-  background-color: aqua;
+  background-color: var(--green);
 }
 
 .speech-bubble p {
@@ -171,11 +163,11 @@ tr td:not(:first-child) {
   .testimonial-text {
     display: block;
     position: absolute;
-    background-color: aqua;
+    background-color: var(--green);
     width: 20rem;
-    top: 14rem;
+    top: 16rem;
     right: 0rem;
-    font-size: 2rem;
+    font-size: 1.3rem;
     padding: 1.5rem;
     border-radius: 2rem;
   }
@@ -236,8 +228,16 @@ tr td:not(:first-child) {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 830px) {
   .testimonial-text {
     right: 20%;
+    font-size: 1.6rem;
+
+  }
+}
+
+@media (min-width: 830px) {
+  .testimonial-text {
+    font-size: 2rem;
   }
 }

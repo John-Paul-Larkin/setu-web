@@ -1,3 +1,7 @@
+/* Here I have two backgrounds for the hero, same as the home page */
+/* This darkens the background without also darkening the overlaying text  */
+/* Z-index was nescessary here to counteract stacking context  */
+/* Else hero would overlay the nav */
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("/images/contact3.jpg");
   background-size: cover, cover;
@@ -33,7 +37,7 @@
 .contact-details > div > div {
   max-width: 20rem;
   height: 20rem;
-  background-color: beige;
+  background-color: var(--cream);
   box-shadow: 1px 1px 5px 0px var(--black);
   margin: 1rem;
   padding-left: 1rem;
