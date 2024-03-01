@@ -3,6 +3,7 @@
 /* Z-index was nescessary here to counteract stacking context  */
 /* Else hero would overlay the nav */
 .hero {
+  height: 30rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("/images/students.jpg");
   background-size: cover, cover;
   background-repeat: no-repeat;
@@ -14,6 +15,7 @@
 
 .heading-wrapper {
   padding: 2rem;
+  padding-top: 8rem;
 }
 
 .hero h2 {
@@ -29,7 +31,8 @@
 }
 
 .course-description {
-  background-color: var(--white);
+  height: 30rem;
+  background-color: white;
   padding: 1rem;
 }
 
@@ -39,22 +42,48 @@
   margin-bottom: 1rem;
 }
 
+.course-description p {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 50%;
+  padding: 1rem;
+}
+
+.course-description-img-wrapper {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
 .calendar {
   height: 30rem;
-
   padding: 1rem;
   background-color: var(--red);
   color: var(--white);
 }
 
-.calendar img {
+.calendar-img-wrapper {
+  width: 100%;
+}
+
+.calendar-img-wrapper img {
   width: 100%;
   max-height: 15rem;
   object-fit: cover;
 }
 
+.calendar p {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 50%;
+  padding: 1rem;
+}
+
 .modules {
-  background-color: var(--pink);
+  background-image: linear-gradient(to right, rgb(182, 61, 79), var(--pink));
   padding: 2rem;
   margin: auto;
   height: 30rem;
@@ -104,6 +133,7 @@ tr td:not(:first-child) {
   height: 25rem;
 }
 
+/* I use an after pseudo-element here to create the semi circle behind the image  */
 .testimonial .img-wrapper::after {
   content: "";
   position: absolute;
@@ -142,33 +172,36 @@ tr td:not(:first-child) {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  .course-description img {
+
+  .course-description-img-wrapper {
     max-width: 50%;
-    object-fit: contain;
+    height: 100%;
   }
 
   .course-description p {
     width: 50%;
+    height: 100%;
+    font-size: 1.2rem;
   }
 
   .calendar {
     display: flex;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 
-  .calendar img {
+  .calendar-img-wrapper {
     order: 1;
-    max-width: 50%;
+    object-fit: cover;
+  }
+
+  .calendar-img-wrapper img {
+    height: 30rem;
+    max-height: 100%;
   }
 
   .calendar p {
-    width: 50%;
-    order: 0;
-    padding-right: 1rem;
-    padding-top: 0rem;
-    margin-top: auto;
-    margin-bottom: auto;
+    height: 100%;
+    width: 100%;
+    font-size: 1.2rem;
   }
 }
 
@@ -219,7 +252,6 @@ tr td:not(:first-child) {
 
   .course-description p {
     font-size: 1.6rem;
-    padding-left: 0;
     margin-top: auto;
     margin-bottom: auto;
   }
