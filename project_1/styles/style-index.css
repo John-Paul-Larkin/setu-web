@@ -40,6 +40,8 @@
 }
 
 .calendar {
+  height: 30rem;
+
   padding: 1rem;
   background-color: var(--red);
   color: var(--white);
@@ -55,6 +57,7 @@
   background-color: var(--pink);
   padding: 2rem;
   margin: auto;
+  height: 30rem;
 }
 
 table {
@@ -66,11 +69,6 @@ table {
   text-align: left;
 }
 
-.testimonial-wrapper {
-  background-color: var(--white);
-  overflow: hidden;
-}
-
 tr > td {
   border-right: 1px solid black;
 }
@@ -78,6 +76,21 @@ tr > td {
 tr td:not(:first-child) {
   text-align: center;
   background-color: var(--white);
+}
+
+.setu-video {
+  height: 30rem;
+}
+
+.setu-video iframe {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+
+.testimonial-wrapper {
+  background-color: var(--white);
+  overflow: hidden;
 }
 
 .testimonial {
@@ -232,7 +245,6 @@ tr td:not(:first-child) {
   .testimonial-text {
     right: 20%;
     font-size: 1.6rem;
-
   }
 }
 
