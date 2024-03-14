@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Lab six - Forms and PHP</title>
+    <!-- C00001754 -->
+    <!-- John Paul larkin -->
+    <!-- 14/3/2024 -->
+  </head>
+  <body>
+    <h1>Welcome to this amazing form</h1>
+
+    <form>
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required placeholder="Enter name here" /><br /><br />
+
+      <label for="favourite-animal">What is your favourite animal:</label><br />
+      <select id="favourite-animal" name="favourite-animal">
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="bird">Bird</option>
+      </select>
+
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>How do you feel about clicking option inputs:</legend>
+
+        <input type="radio" id="option1" name="option-opinion" value="like" required />
+        <label for="option1">I like them</label><br />
+
+        <input type="radio" id="option2" name="option-opinion" value="dont care" />
+        <label for="option2">I do not care about them</label><br />
+
+        <input type="radio" id="option3" name="option-opinion" value="hate" />
+        <label for="option3">I hate them</label>
+      </fieldset>
+      
+      <br />
+
+      <label for="contact-date">Date:</label><br />
+      <input type="date" id="contact-date" name="contact-date" /><br /><br />
+      <div class="buttons">
+        <input type="reset" value="RESET" />
+        <input type="submit" value="SUBMIT" />
+      </div>
+    </form>
+  </body>
+</html>
