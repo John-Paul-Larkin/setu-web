@@ -1,3 +1,7 @@
+/* C00001754  */
+/* John Paul larkin  */
+/* Project Part 1 20%  */
+
 /* Here I have two backgrounds for the hero, same as the home page */
 /* This darkens the background without also darkening the overlaying text  */
 /* Z-index was nescessary here to counteract stacking context  */

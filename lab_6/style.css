@@ -2,8 +2,12 @@
 /* John Paul larkin */
 /* 14/3/2024 */
 
+* {
+  box-sizing: border-box;
+}
+
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 form {
@@ -15,20 +19,37 @@ form {
 }
 
 .buttons {
-    display: flex;
-    justify-content: end;
+  display: flex;
+  justify-content: end;
 }
 
-input[type="reset"], input[type="submit"]{
-    background-color: gray;
-    color:white;
-    padding: .6rem;
-    border: 0;
-    border-radius: .5rem;
-    cursor: pointer;
-    margin-left: 1rem;
+input[type="reset"],
+input[type="submit"] {
+  background-color: gray;
+  color: white;
+  padding: 0.6rem;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
 }
 
-input[type="reset"]:hover, input[type="submit"]:hover{
-    background-color: rgb(25, 71, 25);
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: rgb(25, 71, 25);
+}
+
+.output {
+  max-width: 440px;
+  height: 410px;
+  background-color: grey;
+  margin: auto;
+  padding:1rem;
+  border: 2px solid black;
+  color:white;
+}
+
+span {
+    /* background-color: red; */
+    color:blue;
 }

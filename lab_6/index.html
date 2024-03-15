@@ -13,7 +13,7 @@
   <body>
     <h1>Welcome to this amazing form</h1>
 
-    <form>
+    <form action="./welcome.php" method="post">
       <label for="name">Name:</label><br />
       <input type="text" id="name" name="name" required placeholder="Enter name here" /><br /><br />
 
@@ -30,20 +30,20 @@
       <fieldset>
         <legend>How do you feel about clicking option inputs:</legend>
 
-        <input type="radio" id="option1" name="option-opinion" value="like" required />
+        <input type="radio" id="option1" name="option-opinion" value="you like them" required />
         <label for="option1">I like them</label><br />
 
-        <input type="radio" id="option2" name="option-opinion" value="dont care" />
+        <input type="radio" id="option2" name="option-opinion" value="you dont care" />
         <label for="option2">I do not care about them</label><br />
 
-        <input type="radio" id="option3" name="option-opinion" value="hate" />
+        <input type="radio" id="option3" name="option-opinion" value="you hate them" />
         <label for="option3">I hate them</label>
       </fieldset>
-      
+
       <br />
 
       <label for="contact-date">Date:</label><br />
-      <input type="date" id="contact-date" name="contact-date" /><br /><br />
+      <input type="date" id="contact-date" name="contact-date" required /><br /><br />
       <div class="buttons">
         <input type="reset" value="RESET" />
         <input type="submit" value="SUBMIT" />
