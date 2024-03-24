@@ -1,0 +1,38 @@
+/* C00001754 */
+/* John Paul larkin */
+/* 24/3/2024 */
+/* Lab 7 */
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 10px;
+}
+
+.container {
+  background-color: #ffd8be;
+  max-width: 50rem;
+  margin: 5rem auto 0 auto;
+  padding: 1rem;
+}
+
+button {
+  border: 0;
+  background-color: #b8b8ff;
+  width: 20rem;
+  padding: .5rem;
+  margin-top: .5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color:white;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

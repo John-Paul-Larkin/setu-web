@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Lab Seven - Intro to JS</title>
+    <!-- C00001754 -->
+    <!-- John Paul larkin -->
+    <!-- 24/3/2024 -->
+
+    <script>
+      function handleTextInputChange() {
+        const textInput = document.getElementById("textInput").value;
+        document.getElementById("welcome").innerText = textInput;
+      }
+
+      function handleTextColorChange() {
+        const colorInput = document.getElementById("colorInput").value;
+        document.getElementById("welcome").style.color = colorInput;
+      }
+
+      function handleIncreaseTextSize() {
+        document.getElementById("welcome").style.fontSize = "100px";
+      }
+
+      function handleDecreaseTextSize() {
+        document.getElementById("welcome").style.fontSize = "20px";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="welcome">Hello</h1>
+      <div class="inputs">
+        <br />
+        <input type="text" id="textInput" oninput="handleTextInputChange()" />
+        <br />
+        <input type="color" id="colorInput" onchange="handleTextColorChange()" />
+        <br />
+        <button onclick="handleIncreaseTextSize()">Increase size</button>
+        <br />
+        <button onclick="handleDecreaseTextSize()">Decrease size</button>
+      </div>
+    </div>
+  </body>
+</html>
+ 
