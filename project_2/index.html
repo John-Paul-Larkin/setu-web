@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style-index.css" />
+    <link rel="stylesheet" href="./styles/style-global.css" />
+
+    <title>Home</title>
+    <!-- C00001754 -->
+    <!-- John Paul larkin -->
+    <!-- Project Part 1 20% -->
+    <!-- 26/2/2024 -->
+
+    <!-- Roboto font link from fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./scripts/button-script.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="header">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="https://www.bordbia.ie/recipes/potato-recipes/" class="logo">
+          <img src="./images/logo2.png" alt="humble spud logo" />
+        </a>
+        <!-- Hamburger icon -->
+        <input class="checkbox" type="checkbox" id="checkbox" />
+        <label class="hamburger" for="checkbox"><span class="hamburger-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./recipes.html">Recipes</a></li>
+            <li><a href="./questionnaire.html">Questionnaire</a></li>
+            <li><a href="./about.html">About us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="hero">
+        <div class="heading-wrapper">
+          <h1>The Humble Spud</h1>
+          <h2>The most versatile vegetable</h2>
+        </div>
+      </section>
+
+      <section class="true-favourite">
+        <div>
+          <h2>A True Favourite</h2>
+          <p>
+            Often underestimated, the humble potato is a true culinary chameleon. With its starchy texture and mild flavor, it serves as a blank
+            canvas for endless culinary creations. Whether mashed into a comforting side dish, baked to crispy perfection, transformed into a
+            flavorful soup, or even woven into delicate gnocchi, the potato's versatility knows no bounds.
+          </p>
+          <p>
+            Did you know that potatoes contain a good dose of Vitamin C and potassium? Plus, they're naturally fat-free! This adaptable vegetable
+            plays a starring role in cuisines all over the world, proving that deliciousness doesn't have to be complicated.
+          </p>
+        </div>
+        <div class="true-favourite-img-wrapper">
+          <img src="./images/roast.jpg" alt="slices of crispy roasted potatoes" />
+        </div>
+      </section>
+
+      <section class="facts">
+        <div class="arrows-wrapper">
+          <button class="backwards" onclick="lastFact()">
+            <img src="./images/forward.svg" alt="" />
+          </button>
+          <button onclick="nextFact()">
+            <img src="./images/forward.svg" alt="" />
+          </button>
+        </div>
+
+        <p id="facts-text">Cick on the arrows to reveal some amazing facts about potatos</p>
+      </section>
+    </div>
+
+    <footer>
+      <div>© Big Potato</div>
+    </footer>
+  </body>
+</html>
