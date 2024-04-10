@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style-index.css" />
+    <link rel="stylesheet" href="./styles/style-global.css" />
+
+    <title>Questionnaire</title>
+    <!-- C00001754 -->
+    <!-- John Paul larkin -->
+    <!-- Project Part 2 20% -->
+
+    <!-- Roboto font link from fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./scripts/maxDateScript.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="header" id="top">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="https://www.bordbia.ie/recipes/potato-recipes/" class="logo">
+          <img src="./images/logo2.png" alt="humble spud logo" />
+        </a>
+        <!-- Hamburger icon -->
+        <input class="checkbox" type="checkbox" id="checkbox" />
+        <label class="hamburger" for="checkbox"><span class="hamburger-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./recipes.html">Recipes</a></li>
+            <li><a href="./questionnaire.html">Questionnaire</a></li>
+            <li><a href="./about.html">About us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container quest">
+      <h1>Potato Survey</h1>
+      <p>
+        Welcome to our online survey about potatoes! This survey aims to delve into your perceptions, preferences, and experiences with potatoes, from
+        favorite dishes to cooking methods and beyond. Potatoes are a versatile and beloved staple food enjoyed worldwide, offering a spectrum of
+        culinary possibilities. Your valuable input will help us gain insights into the diverse ways potatoes are enjoyed and utilized in various
+        cuisines and cultures. Whether you're a potato aficionado or simply enjoy the occasional spud, your participation is crucial in shaping our
+        understanding of this humble yet remarkable vegetable. Let's embark on this flavorful journey together!
+      </p>
+
+      <div class="form">
+        <form action="./formHandler.php" method="post">
+          <div>
+            <label for="how_often">How often do you eat Potatoes?</label>
+            <br />
+            <select id="how_often" name="how_often">
+              <option value="daily">Daily</option>
+              <option value="several times a week">Several times a week</option>
+              <option value="once a week">Once a week</option>
+              <option value="a few times a month">A few times a month</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="last_eat">When did you last eat Potatoes?</label>
+            <br />
+            <!-- Generate the current date as max, so the user cannot select any date after today -->
+            <input required type="date" id="last_eat" name="last_eat" />
+          </div>
+
+          <div>
+            <fieldset>
+              <p>What is your favourite way to eat Potatoes?</p>
+              <input type="radio" id="mashed" name="fav_way_eat" value="mashed" required />
+              <label for="mashed">Mashed</label><br />
+
+              <input type="radio" id="baked" name="fav_way_eat" value="baked" />
+              <label for="css">Baked</label><br />
+              <input type="radio" id="chips" name="fav_way_eat" value="chips" />
+              <label for="chips">chips</label><br />
+              <input type="radio" id="roasted" name="fav_way_eat" value="roasted" />
+              <label for="roasted">roasted</label><br />
+            </fieldset>
+          </div>
+
+          <div>
+            <label for="fav_memory">Tell us your favourite Potato memory</label>
+            <br />
+            <textarea required id="fav_memory" name="fav_memory" rows="6" cols="50" placeholder="Enter your favourite memory here"></textarea>
+          </div>
+
+          <div>
+            <label for="email">Enter your email and we will contact you about spuds:</label><br />
+            <input required type="email" id="email" name="email" />
+          </div>
+
+          <div>
+            <input type="submit" value="SUBMIT" class="button"/>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        <!-- Fragment identifier -->
+        <a href="#top">Scroll to top</a>
+        <p>© Big Potato</p>
+      </div>
+    </footer>
+  </body>
+</html>

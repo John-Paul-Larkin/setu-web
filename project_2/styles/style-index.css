@@ -1,0 +1,607 @@
+/* C00001754  */
+/* John Paul larkin  */
+/* Project Part 1 20%  */
+
+/****************************************************************** */
+/* index.html Hero section */
+
+/* Here I have two backgrounds  */
+/* This darkens the background without also darkening the overlaying text  */
+/* Z-index was nescessary here to counteract stacking context  */
+/* Else hero would overlay the nav */
+.hero {
+  height: 30rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../images/hero.jpg");
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  min-height: 14rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.hero .heading-wrapper {
+  padding: 2rem;
+  padding-top: 8rem;
+}
+
+.hero h1 {
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 3.5rem;
+}
+
+.hero h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+/****************************************************************** */
+/* index.html True favourite section */
+
+.true-favourite {
+  background-color: var(--sandy-beige);
+}
+
+.true-favourite h2 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.true-favourite .img-wrapper {
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.true-favourite img {
+  width: 100%;
+  display: block;
+}
+
+.true-favourite p {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 50%;
+  padding: 1rem;
+}
+
+/****************************************************************** */
+/* index.html Health benefits section */
+
+.health-benefits {
+  background-color: var(--sandy-beige);
+}
+
+.health-benefits h2 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.health-benefits .img-wrapper {
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  background-color: aqua;
+}
+
+.health-benefits img {
+  display: block;
+}
+
+.health-benefits p {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 50%;
+  padding: 1rem;
+}
+
+/****************************************************************** */
+/* index.html Facts section */
+
+/* overflow hidden is required
+so the animation does not coninue outside the container
+*/
+.facts {
+  background-color: var(--green);
+  overflow: hidden;
+}
+
+.facts h2 {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.facts button {
+  width: 3rem;
+  cursor: pointer;
+  border: 0;
+  background: none;
+}
+
+.facts img {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* 
+Makes the buttons a little larger and rotates 
+them when the user hovers
+*/
+.facts button:hover img {
+  transform: scale(1.2) rotate(360deg);
+  border-radius: 999px;
+}
+
+.facts .text-wrapper {
+  height: 16rem;
+}
+
+/* 
+I used one arrow icon
+this class rotates it so it looks
+like a backwards arrow
+*/
+.facts .backwards {
+  transform: rotate(180deg);
+}
+
+/*container for the arrows
+Which keeps them centered on the screen
+*/
+.facts .arrows-wrapper {
+  max-width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+/* Must be position relative so the
+text can be animated in and out 
+using the left property
+*/
+#facts-text {
+  position: relative;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 2px 10px black;
+  background-color: bisque;
+  padding: 2rem;
+  border-radius: 1rem;
+  min-height: 14rem;
+}
+
+/* 
+These two class are very similar they animate the text left, or right
+depending on which button is pressed.
+These classes are added dynmically by javascript
+*/
+.facts .slide-left {
+  animation: slideOutLeft 0.3s linear forwards, slideInRight 0.3s linear forwards 0.3s;
+}
+
+.facts .slide-right {
+  animation: slideOutRight 0.3s linear forwards, slideInLeft 0.3s linear forwards 0.3s;
+}
+
+/* Animates the text completely off the screen */
+@keyframes slideOutRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100vw;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 0;
+  }
+}
+/* These two key frame animations
+are the inverse of the above two
+*/
+@keyframes slideOutLeft {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100vw;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    left: +100vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/****************************************************************** */
+/* index.html Video section */
+.video {
+  height: 40rem;
+}
+
+.video > div {
+  height: 20rem;
+}
+
+.video iframe {
+  height: 20rem;
+  /* height: 100%; */
+  width: 100%;
+}
+
+.video h2 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.video p {
+  padding: 1rem;
+}
+
+/* Turns the fork and knife icon into a circle */
+.video .fork {
+  border-radius: 999px;
+  border: 2px solid #0000ee;
+  height: 4rem;
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem;
+}
+
+.video img {
+  padding: 1rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.video .text-fork-wrapper {
+  display: flex;
+}
+
+/* ***************************************************************** */
+/* Questionnaire.html */
+
+.quest .form {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../images/wedges.webp");
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  color: white;
+}
+
+.quest h1 {
+  padding: 2rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.quest p {
+  padding: 1rem;
+}
+
+.quest form {
+  display: flex;
+  flex-direction: column;
+}
+
+.quest form > div {
+  margin: 1rem;
+}
+
+.quest .button {
+  padding: 0.6rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* ***************************************************************** */
+/* recipes.html */
+
+.recipes .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.recipes .grid > div {
+  /* min-width: 100%; */
+  min-height: 20rem;
+  /* max-width: 100%; */
+  width: 100%;
+  position: relative;
+}
+
+.recipes .grid div:first-child {
+  background-color: aquamarine;
+}
+
+.recipes .grid img {
+  /* height: 20rem; */
+  object-fit: cover;
+  min-width: 100%;
+  height: 100%;
+}
+
+.recipes .grid h3 {
+  position: absolute;
+  top: 4rem;
+  left: 2rem;
+  color: white;
+  background-color: brown;
+  max-width: 10rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.recipes .hero {
+  /* padding-bottom: 2rem; */
+  height: 30rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../images/recipe.jpg");
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.recipes .hero h1 {
+  font-size: 4rem;
+  padding: 5rem;
+}
+
+.recipes .intro {
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+/****************************************************************** */
+/* formHandler.php */
+
+.results h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.results table {
+  background-color: var(--cream);
+  /* max-width: 40rem; */
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
+.results th {
+  border-bottom: 2px solid black;
+  text-align: left;
+  padding: 1rem;
+}
+
+.results td {
+  padding: 1rem;
+  border-bottom: 1px solid black;
+}
+
+/****************************************************************** */
+/* about.html */
+
+.about h1 {
+  padding: 1rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.about .founder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.about .founder > * {
+  max-width: 20rem;
+}
+
+.about .founder p:nth-of-type(1) {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.about .founder p:nth-of-type(3) {
+  text-align: center;
+}
+
+.about .image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about img {
+  height: 30rem;
+}
+
+.about .values h2 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.about .values-wrapper {
+  background-color: rgb(54, 197, 149);
+  display: flex;
+  flex-direction: column;
+}
+
+.about .values-wrapper * > p,
+h3 {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.about .figma h2 {
+  font-size: 3rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.about iframe {
+  width:100%;
+  height:100rem
+}
+
+/****************************************************************** */
+/* Responsive > 650PX */
+
+@media (min-width: 650px) {
+  .true-favourite {
+    display: flex;
+  }
+
+  .true-favourite .img-wrapper {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    max-height: 40rem;
+    background-color: aqua;
+  }
+
+  .true-favourite img {
+    height: auto;
+    object-fit: contain;
+    width: auto;
+  }
+
+  .true-favourite div:first-of-type {
+    width: 50%;
+    /* height: 100%; */
+    font-size: 1.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .health-benefits {
+    display: flex;
+  }
+
+  .health-benefits .img-wrapper {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    order: 1;
+  }
+
+  .health-benefits img {
+    object-position: right;
+    height: 100%;
+  }
+
+  .health-benefits div:first-of-type {
+    width: 50%;
+    height: 100%;
+    font-size: 1.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    order: 2;
+  }
+
+  .facts .text-wrapper {
+    font-size: 1.2rem;
+  }
+
+  .video {
+    height: 34rem;
+    display: flex;
+  }
+
+  .video > div {
+    height: 100%;
+    width: 50%;
+  }
+
+  .video iframe {
+    height: 100%;
+    width: 50%;
+  }
+
+  .video p {
+    font-size: 1.2rem;
+  }
+
+  .video .text-fork-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/************************************************************* */
+/* Responsive > 700PX */
+
+@media (min-width: 700px) {
+  .recipes .intro {
+    font-size: 2rem;
+  }
+
+  .recipes .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recipes .grid img {
+    width: 100%;
+  }
+
+  .about .founder-wrapper {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50rem;
+  }
+
+  .about .founder-wrapper > div:first-of-type {
+    display: flex;
+    align-items: center;
+  }
+
+  .about .values-wrapper {
+    flex-direction: row;
+  }
+
+  .about .values-wrapper > div {
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/************************************************************* */
+/* Responsive > 800PX */
+
+@media (min-width: 800px) {
+  .true-favourite {
+    max-height: 30rem;
+  }
+
+  .health-benefits {
+    max-height: 30rem;
+  }
+}

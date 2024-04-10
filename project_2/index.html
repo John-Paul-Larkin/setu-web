@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style-index.css" />
+    <link rel="stylesheet" href="./styles/style-global.css" />
+
+    <title>Home</title>
+    <!-- C00001754 -->
+    <!-- John Paul larkin -->
+    <!-- Project Part 2 20% -->
+
+    <!-- Roboto font link from fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./scripts/animateFactsScript.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="header" id="top">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="https://www.bordbia.ie/recipes/potato-recipes/" class="logo">
+          <img src="./images/logo2.png" alt="humble spud logo" />
+        </a>
+        <!-- Hamburger icon -->
+        <input class="checkbox" type="checkbox" id="checkbox" />
+        <label class="hamburger" for="checkbox"><span class="hamburger-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./recipes.html">Recipes</a></li>
+            <li><a href="./questionnaire.html">Questionnaire</a></li>
+            <li><a href="./about.html">About us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="hero">
+        <div class="heading-wrapper">
+          <h1>The Humble Spud</h1>
+          <h2>The most versatile vegetable</h2>
+        </div>
+      </section>
+
+      <section class="true-favourite">
+        <div>
+          <h2>A True Favourite</h2>
+          <p>
+            Often underestimated, the humble potato is a true culinary chameleon. With its starchy texture and mild flavor, it serves as a blank
+            canvas for endless culinary creations. Whether mashed into a comforting side dish, baked to crispy perfection, transformed into a
+            flavorful soup, or even woven into delicate gnocchi, the potato's versatility knows no bounds.
+          </p>
+          <p>
+            Potatoes hold immense significance in Ireland, historically and culturally. Introduced in the 16th century, they became a staple food due
+            to their high yield and nutritional value. The Great Famine of the mid-19th century, caused by potato blight, profoundly impacted Ireland,
+            highlighting the critical role of potatoes in its history and survival.
+          </p>
+        </div>
+        <div class="img-wrapper">
+          <img src="./images/roast.jpg" alt="slices of crispy roasted potatoes" />
+        </div>
+      </section>
+
+      <section class="health-benefits">
+        <div>
+          <h2>Health benefits</h2>
+          <p>
+            Did you know that potatoes contain a good dose of Vitamin C and potassium? Plus, they're naturally fat-free! This adaptable vegetable
+            plays a starring role in cuisines all over the world, proving that deliciousness doesn't have to be complicated.
+          </p>
+          <p>
+            Potatoes offer notable health benefits, especially due to their fiber content. A medium-sized potato contains about 2 grams of fiber,
+            aiding digestion and promoting gut health. Fiber helps regulate blood sugar levels, supports weight management, and reduces the risk of
+            chronic diseases like heart disease and diabetes.
+          </p>
+        </div>
+        <div class="img-wrapper">
+          <img src="./images/family.jpg" alt="family enjoying a healthy meal together" />
+        </div>
+      </section>
+
+      <section class="facts">
+        <h2>Potato Facts</h2>
+        <div class="text-wrapper">
+          <p id="facts-text">Click on the arrows to reveal some amazing facts about potatos. Alternatiively use the arrow keys</p>
+        </div>
+        <div class="arrows-wrapper">
+          <!-- reverse this arrow in CSS to appear as back arrow  -->
+          <button class="backwards" onclick="lastFact()">
+            <img src="./images/forward.svg" alt="back arrow" />
+          </button>
+          <button onclick="nextFact()">
+            <img src="./images/forward.svg" alt="forward arrow" />
+          </button>
+        </div>
+      </section>
+
+      <section class="video">
+        <div>
+          <h2>Recipes</h2>
+          <p>
+            Check out these amazing roast potatoes by Kenji López of Serious Eats. Kenji is well-regarded for his expertise in culinary science and
+            his ability to explain complex cooking concepts in an accessible way.
+          </p>
+          <div class="text-fork-wrapper">
+            <p>
+              Then click the utensils to see our page dedicated to our curated selection of recipes catering to every skill level and taste
+              preference. We add new recipes all the time,so be sure to check in and try the latest.
+            </p>
+
+            <div class="fork">
+              <a href="./recipes.html">
+                <img src="./images/fork.svg" alt="knife and fork icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <iframe
+          src="https://www.youtube.com/embed/argKpeiKFfo?si=Mp8fkcDfgqZCeLU_"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </div>
+
+    <footer>
+      <div>
+        <!-- Fragment identifier -->
+        <a href="#top">Scroll to top</a>
+        <p>© Big Potato</p>
+      </div>
+    </footer>
+  </body>
+</html>
