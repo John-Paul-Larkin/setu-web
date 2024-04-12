@@ -1,0 +1,14 @@
+/* John Paul larkin - C00001754 - 12/4/2024 - lab 8 */
+
+button {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.box {
+  border: 1px solid black;
+}
+
+.btn-wrapper {
+  padding: 3rem;
+}

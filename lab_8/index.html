@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>index.html</title>
+    <!-- John Paul larkin - C00001754 - 12/4/2024 lab 8-->
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./src.js" defer></script>
+
+    <!-- The defer attribute is used here to ensure that the script is executed
+     after the document has been parsed, but before firing the DOMContentLoaded event. -->
+  </head>
+  <body id="body">
+    <div class="box">
+      <div class="btn-wrapper">
+        <h1 id="welcome">Welcome</h1>
+        <button id="button" onclick="changeMode()">Dark mode</button>
+        <input id="input" oninput="getMark()" type="number" />
+      </div>
+    </div>
+    <h3 id="mark-display"></h3>
+  </body>
+</html>
