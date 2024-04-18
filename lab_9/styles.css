@@ -1,0 +1,40 @@
+/* John Paul larkin - C00001754 - 18/4/2024 - lab 9 */
+
+.container {
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+input {
+  width: 7rem;
+}
+
+.input-wrapper {
+  display: flex;
+  background-color: beige;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1rem;
+}
+
+.results {
+  background-color: cadetblue;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-wrapper {
+  padding: 1rem;
+}
