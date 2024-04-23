@@ -1,0 +1,223 @@
+/* C00001754  */
+/* John Paul larkin  */
+/* Project Part 2 20%  */
+
+/* 
+   This global css file contains the styles which is required on every page
+   ie the nav bar, the header, the footer and the container 
+*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/* css variables for colours 
+  -Allows me to expirement with colours and have them update everywhere in the code. 
+*/
+:root {
+  --russet-brown: #8d5524;
+  --green: #6d8764;
+  --sandy-beige: #d2b48c;
+  --cream: #f8f0e3;
+  --deep-brown: #452914;
+  --gray: #85888c;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  min-width: 330px;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: auto;
+  background-color: var(--sandy-beige);
+}
+
+footer {
+  height: 5rem;
+  background-color: var(--russet-brown);
+  color: white;
+}
+
+footer div {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5rem;
+}
+
+footer a {
+  margin-right: 1rem;
+}
+
+/* ***************************************************************** */
+/* Nav  */
+/* All styles below are for the header/nav section */
+
+.header {
+  background-color: var(--russet-brown);
+  box-shadow: 1px 1px 5px 0px black;
+  top: 0;
+  width: 100%;
+}
+.nav-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Logo */
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  height: 9rem;
+  margin: 0.5rem 0.5rem 0.5rem 4rem;
+}
+
+/* Nav menu */
+/* Position is fixed and size 100%, so the nav takes up the entire screen  */
+/* On screen sizes less than 630px */
+.nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--russet-brown);
+  overflow: hidden;
+  z-index: 2;
+}
+.nav ul a {
+  display: block;
+  padding: 2rem;
+  color: white;
+}
+.nav ul a:hover {
+  background-color: var(--gray);
+}
+
+/* animate the nav from top of screen to bottom by transitioning height*/
+.nav {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+/* Menu Icon */
+.hamburger {
+  cursor: pointer;
+  float: right;
+  padding: 3rem;
+}
+/* Create a middle line for the hamburger */
+.hamburger-line {
+  background: white;
+  display: block;
+  height: 0.2rem;
+  position: relative;
+  width: 2rem;
+}
+
+/* Then create 2 more lines using before and after*/
+.hamburger-line::before,
+.hamburger-line::after {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+/* Offset those two lines */
+.hamburger-line::before {
+  top: 0.5rem;
+}
+.hamburger-line::after {
+  top: -0.5rem;
+}
+
+/* Hide the input .checkbox   */
+.checkbox {
+  display: none;
+}
+
+/* Toggle menu icon */
+/* When the checkbox is checked */
+/* Use the sibling selector to stop displaying the middle line */
+/* then animate the two offset line into an X */
+.checkbox:checked ~ nav {
+  max-height: 100%;
+}
+.checkbox:checked ~ .hamburger .hamburger-line {
+  background: transparent;
+}
+.checkbox:checked ~ .hamburger .hamburger-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.checkbox:checked ~ .hamburger .hamburger-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* ***************************************************************** */
+/* Responsiveness */
+
+@media (max-width: 380px) {
+  .logo img {
+    margin: 1rem;
+  }
+}
+
+/* On screens larger than 735px  */
+/* Modify the nav to float right of the header */
+@media (min-width: 735px) {
+  .nav {
+    max-height: none;
+    position: relative;
+    float: right;
+    width: fit-content;
+  }
+  .nav ul li {
+    float: left;
+  }
+
+  .nav ul a:hover {
+    background-color: transparent;
+    color: var(--gray);
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (min-width: 850px) {
+  .logo img {
+    height: 9rem;
+  }
+  .nav ul a {
+    font-size: 1.3rem;
+  }
+
+  .nav {
+    margin-top: 1rem;
+  }
+}

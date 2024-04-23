@@ -38,3 +38,7 @@ input {
 .btn-wrapper {
   padding: 1rem;
 }
+
+button {
+  cursor: pointer;
+}

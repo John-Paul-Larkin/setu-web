@@ -79,3 +79,6 @@ function handleImageError() {
 
   document.getElementById("errors").innerHTML = "failed to load image";
 }
+
+
+
