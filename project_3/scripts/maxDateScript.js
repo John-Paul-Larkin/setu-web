@@ -1,6 +1,6 @@
 /* C00001754  */
 /* John Paul larkin  */
-/* Project Part 2 20%  */
+/* Project Part 3 20%  */
 
 // This script gets todays date, formats it
 // and puts it on the max attribute of the date input

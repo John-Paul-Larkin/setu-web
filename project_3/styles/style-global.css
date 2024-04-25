@@ -1,6 +1,6 @@
 /* C00001754  */
 /* John Paul larkin  */
-/* Project Part 2 20%  */
+/* Project Part 3 20%  */
 
 /* 
    This global css file contains the styles which is required on every page
@@ -48,15 +48,16 @@ body {
 }
 
 footer {
-  height: 5rem;
+  height: 8rem;
   background-color: var(--russet-brown);
   color: white;
 }
 
-footer div {
+footer > div {
   max-width: 1200px;
   margin: auto;
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -65,6 +66,24 @@ footer div {
 
 footer a {
   margin-right: 1rem;
+}
+
+footer .social {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+}
+
+footer .social p {
+  font-size: 0.7rem;
+  padding-bottom: 0.5rem;
+}
+
+footer .social img {
+  width: 1.53rem;
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+  cursor: pointer;
 }
 
 /* ***************************************************************** */

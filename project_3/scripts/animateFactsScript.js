@@ -1,6 +1,6 @@
 /* C00001754  */
 /* John Paul larkin  */
-/* Project Part 2 20%  */
+/* Project Part 3 20%  */
 
 // an array of strings with fascinating potato facts
 
