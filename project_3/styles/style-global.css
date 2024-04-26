@@ -26,9 +26,12 @@ ul {
 :root {
   --russet-brown: #8d5524;
   --green: #6d8764;
+  --green1: #83a278;
+  --green2: #6d8764;
+
   --sandy-beige: #d2b48c;
   --cream: #f8f0e3;
-  --deep-brown: #452914;
+  --deep-brown: #8245155b;
   --gray: #85888c;
 }
 
@@ -205,9 +208,9 @@ footer .social img {
   }
 }
 
-/* On screens larger than 735px  */
+/* On screens larger than 920px  */
 /* Modify the nav to float right of the header */
-@media (min-width: 735px) {
+@media (min-width: 920px) {
   .nav {
     max-height: none;
     position: relative;
