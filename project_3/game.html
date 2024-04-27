@@ -3,12 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style-index.css" />
     <link rel="stylesheet" href="./styles/style-project3.css" />
-
     <link rel="stylesheet" href="./styles/style-global.css" />
 
-    <title>About us</title>
+    <title>Game</title>
     <!-- C00001754 -->
     <!-- John Paul larkin -->
     <!-- Project Part 3 20% -->
@@ -20,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="./scripts/game.js" defer></script>
   </head>
   <body>
     <!-- Navigation bar -->
@@ -45,67 +44,31 @@
       </div>
     </header>
 
-    <div class="container about">
-      <div class="founder-wrapper">
-        <div>
-          <div class="founder">
-            <h1>
-              <span>Welcome to</span><br />
-              The Humble Spud
-            </h1>
-            <p>Meet our founder Sarah</p>
-            <p>(We call her the big Chip)</p>
-            <p>
-              Sarah has always had a passion for potatoes, and when she met Mark, another potato nut, they decided to combine powers and build this
-              amazing organisation.
-            </p>
-          </div>
+    <div class="container game-wrapper">
+      <div class="game-info">
+        <h2>The Tayto game</h2>
+        <br />
+        <p>Possiblly the worst game of all time?</p>
+        <br />
+        <p>Press the up and down arrows to help MR.Tayto catch the flying spuds.</p>
+      </div>
+      <div class="game">
+        <div id="character">
+          <img src="./images/tayto-sitting.png" />
         </div>
-
-        <div class="image-wrapper">
-          <img src="./images/founder.jpg" alt="sarah the founder" />
+        <div id="cartoon-spud">
+          <img src="./images/cartoon.png" />
         </div>
       </div>
-
-      <div class="values">
-        <h2>Our Values</h2>
-        <div class="values-wrapper">
-          <div>
-            <h3>Innovation</h3>
-            <p>Push the boundaries of potato knowledge for all mankind</p>
-          </div>
-          <div class="support">
-            <h3>Support</h3>
-            <p>Unite to nourish and grow our vibrant potato-loving community!</p>
-          </div>
-          <div>
-            <h3>Creativity</h3>
-            <p>Make fresh new recipes, boil them, mash them stick them in a stew.</p>
-          </div>
-        </div>
+      <div class="packet">
+        <p>Score: <span id="scoreSpan">0</span></p>
+        <img id="packet" src="./images/packet.png" />
       </div>
-
-      <div class="find-us">
-        <h2>Find us</h2>
-        <div class="location-description">
-          <p>Where else would we be, but a field in the middle of nowhere?</p>
-          <p>
-            A remote field is the perfect setting for growing spuds, offering the space and environment they need to thrive away from urban
-            constraints.
-          </p>
-        </div>
-
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15821.086358254277!2d-7.378424099865509!3d53.0681483107469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sie!4v1714046310770!5m2!1sen!2sie"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+      <div id="packet-grid" class="packet-grid">
+        <!-- this will hold the images -->
       </div>
     </div>
+
     <footer>
       <div>
         <div class="social">

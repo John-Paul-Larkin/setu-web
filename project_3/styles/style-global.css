@@ -29,8 +29,9 @@ ul {
   --green1: #83a278;
   --green2: #6d8764;
 
-  --sandy-beige: #d2b48c;
+  --sandy-beige: rgb(210, 180, 140);
   --cream: #f8f0e3;
+  --cream2: #D2B48C;
   --deep-brown: #8245155b;
   --gray: #85888c;
 }
@@ -47,7 +48,25 @@ body {
   min-height: 100vh;
   max-width: 1200px;
   margin: auto;
+
   background-color: var(--sandy-beige);
+  position: relative;
+  z-index: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;  
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background: url("../images/backLines.png");
+  z-index: -1;
 }
 
 footer {

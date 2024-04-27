@@ -1,0 +1,360 @@
+/****************************************************************** */
+/* blog.html */
+
+.blog .blog-card {
+  margin-top: 30px;
+
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  min-height: 300px;
+  /* background-color: aqua; */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: 7px 7px 20px 0px var(--deep-brown);
+}
+
+.blog .blog-card:nth-of-type(2n) {
+  /* CSS properties for odd numbered .blog-card */
+  background-color: var(--cream2);
+}
+
+.blog .blog-card:nth-of-type(2n) .blog-text{
+  /* background-color: aqua; */
+
+}
+
+.blog .blog-card:nth-of-type(2n+1) {
+  /* CSS properties for odd numbered .blog-card */
+  background-color: var(--green);
+}
+
+.blog .blog-card:nth-of-type(2n+1) .blog-text{
+  /* background-color: cadetblue; */
+  padding-top: 30px;
+  
+}
+
+
+.blog p {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.blog .blog-card > div {
+  /* width: 50%; */
+}
+
+.blog .blog-img {
+
+  height: 240px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.blog .game-card img{
+  height: 100%;
+
+}
+
+.blog .farmer-card img{
+  width: 100%;
+}
+
+.blog .mashed-card img{
+  height: 100%;
+} 
+
+.blog .head-card img{
+  width: 100%;
+} 
+
+
+.blog .blog-text {
+  /* background-color: red; */
+  /* height: 240px; */
+}
+
+@media (max-width: 600px) {
+
+  
+}
+
+/****************************************************************** */
+/* game.html */
+
+.game-wrapper .game-info {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.game-wrapper .packet-grid {
+  margin-top: 1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.game-wrapper .packet-grid img {
+  height: 5rem;
+}
+
+.game-wrapper .game {
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+  background-image: url("../images/sky2.jpg");
+}
+
+#character {
+  width: 20px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+  top: 150px;
+}
+
+.game-wrapper .animate {
+  transform: rotate(180deg);
+  animation: packetRotate 0.1s infinite linear;
+}
+
+.game-wrapper .packet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-wrapper .packet img {
+  height: 5rem;
+}
+
+#cartoon-spud {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 130px;
+  left: 500px;
+  animation: cartoonSpud 2s infinite linear;
+}
+
+.game-wrapper img {
+  height: 100%;
+}
+
+.game-wrapper .game p {
+  text-align: center;
+}
+
+.game-wrapper #scoreSpan {
+  margin-right: 1rem;
+}
+
+@keyframes cartoonSpud {
+  0% {
+    left: 500px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+
+@keyframes packetRotate {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+/****************************************************************** */
+/* about.html */
+
+.about h1 {
+  padding: 1rem;
+  font-size: 2.7rem;
+  text-align: center;
+}
+
+.about h1 span {
+  font-size: 0.6em;
+}
+
+.about .founder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about .founder > * {
+  max-width: 22rem;
+}
+
+.about .founder p:nth-of-type(1) {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.about .founder p:nth-of-type(2) {
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+.about .founder p:nth-of-type(3) {
+  text-align: center;
+}
+
+.about .image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.about img {
+  padding-top: 2rem;
+  height: 30rem;
+}
+
+.about .values {
+  background-color: var(--deep-brown);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.about .values h2 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2.7rem;
+}
+
+.about .values-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.about .values-wrapper > * {
+  border-radius: 0.5rem;
+  margin: 1rem;
+  background-color: var(--green1);
+  box-shadow: 5px 3px 10px 1px var(--russet-brown);
+  max-width: 20rem;
+}
+
+.about .values-wrapper * > p,
+h3 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.about .values-wrapper h3 {
+  background-color: var(--green2);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+
+  color: white;
+}
+
+.about .support {
+  transform: scale(1.1);
+}
+
+.about .find-us h2 {
+  font-size: 3rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.about .map {
+  /* background-color: antiquewhite; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about iframe {
+  width: 70%;
+  height: 30rem;
+  margin-bottom: 1rem;
+}
+
+.about .find-us .location-description {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.about .find-us .location-description p:first-of-type {
+  padding-bottom: 1rem;
+}
+
+/* ***************************************************************** */
+/* Responsiveness */
+
+
+
+@media (min-width: 700px) {
+  .about .founder-wrapper {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* background-color: aqua; */
+  }
+
+  .about .founder {
+    align-items: flex-start;
+    padding-bottom: 9rem;
+  }
+
+  .about .founder > * {
+    text-align: left;
+  }
+
+  .about h1 {
+    padding: 0;
+  }
+
+  .about .image-wrapper {
+    padding-left: 7rem;
+  }
+
+  .about .founder p:nth-of-type(3) {
+    text-align: left;
+  }
+
+  .about .founder-wrapper > div:first-of-type {
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+    width: 50%;
+  }
+
+  .about .values-wrapper {
+    flex-direction: row;
+  }
+
+  .about .values-wrapper > div {
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
