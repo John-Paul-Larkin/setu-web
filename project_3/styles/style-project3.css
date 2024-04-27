@@ -2,6 +2,7 @@
 /* blog.html */
 
 .blog .blog-card {
+  flex-direction: column;
   margin-top: 30px;
 
   margin-bottom: 30px;
@@ -12,7 +13,6 @@
   /* background-color: aqua; */
   padding: 30px;
   display: flex;
-  flex-direction: column;
   border-radius: 1rem;
   box-shadow: 7px 7px 20px 0px var(--deep-brown);
 }
@@ -22,26 +22,23 @@
   background-color: var(--cream2);
 }
 
-.blog .blog-card:nth-of-type(2n) .blog-text{
+.blog .blog-card:nth-of-type(2n) .blog-text {
   /* background-color: aqua; */
-
 }
 
-.blog .blog-card:nth-of-type(2n+1) {
+.blog .blog-card:nth-of-type(2n + 1) {
   /* CSS properties for odd numbered .blog-card */
   background-color: var(--green);
 }
 
-.blog .blog-card:nth-of-type(2n+1) .blog-text{
+.blog .blog-card:nth-of-type(2n + 1) .blog-text {
   /* background-color: cadetblue; */
   padding-top: 30px;
-  
 }
 
-
 .blog p {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .blog .blog-card > div {
@@ -49,41 +46,85 @@
 }
 
 .blog .blog-img {
-
+  border-radius: 1rem;
   height: 240px;
   overflow: hidden;
+  /* background-color: white; */
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+
 }
 
-.blog .game-card img{
+.blog .blog-img > div {
+  /* background-color: white; */
+  overflow: hidden;
+
+  max-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+.blog .game-card img {
   height: 100%;
-
 }
 
-.blog .farmer-card img{
+.blog .farmer-card img {
   width: 100%;
 }
 
-.blog .mashed-card img{
+.blog .mashed-card img {
   height: 100%;
-} 
+}
 
-.blog .head-card img{
+.blog .blog-img {
+  /* background-color: white; */
+}
+
+.blog .head-card img {
+  /* background-color: white; */
   width: 100%;
-} 
-
+}
 
 .blog .blog-text {
   /* background-color: red; */
   /* height: 240px; */
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
+  .blog .blog-card > div {
+    width: 50%;
+  }
 
-  
+  .blog .blog-card {
+    flex-direction: row;
+  }
+
+  .blog .blog-card:nth-of-type(2n + 1) .blog-text {
+    /* background-color: cadetblue; */
+    padding-top: 0px;
+    padding-left: 4rem;
+  }
+
+  .blog .blog-card:nth-of-type(2n) .blog-text {
+    padding-right: 4rem;
+    /* background-color: brown; */
+  }
+
+  .blog .blog-img > div {
+    /* background-color: transparent; */
+    background-color: white;
+    height: 240px;
+    width: 20rem;
+  }
+
+  .blog img {
+    max-width: 20rem;
+    /* background-color: white; */
+    border-radius: 1rem;
+  }
 }
 
 /****************************************************************** */
@@ -114,6 +155,7 @@
   border: 1px solid black;
   margin: auto;
   background-image: url("../images/sky2.jpg");
+  position: relative;
 }
 
 #character {
@@ -133,6 +175,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .game-wrapper .packet img {
@@ -145,7 +188,8 @@
   position: relative;
   top: 130px;
   left: 500px;
-  animation: cartoonSpud 2s infinite linear;
+  animation: cartoonSpud infinite linear;
+  animation-duration: 0s;
 }
 
 .game-wrapper img {
@@ -156,9 +200,23 @@
   text-align: center;
 }
 
-.game-wrapper #scoreSpan {
-  margin-right: 1rem;
+.game-wrapper #packet {
+  padding-right: 2rem;
 }
+
+.game-wrapper .game-speed {
+  padding-right: 1rem;
+}
+
+#game-starter {
+  position: absolute;
+  content: 'Mouse over to start the game!';
+  left:150px;
+  top:80px;
+  background-color:white;
+  padding:.5rem;
+}
+
 
 @keyframes cartoonSpud {
   0% {
@@ -306,8 +364,6 @@ h3 {
 
 /* ***************************************************************** */
 /* Responsiveness */
-
-
 
 @media (min-width: 700px) {
   .about .founder-wrapper {
