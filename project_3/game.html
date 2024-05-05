@@ -48,9 +48,12 @@
       <div class="game-info">
         <h2>The Tayto game</h2>
         <br />
-        <p>Possibly the worst game of all time?</p>
+        <p>Possibly the worst game of all time??</p>
         <br />
         <p>Press the up and down arrows to help MR.Tayto catch the flying spuds.</p>
+      </div>
+      <div class="lives">
+        <p>Lives: <span id="lives"></span></p>
       </div>
       <div class="game">
         <span id="game-starter" onmouseover="startGame()">Mouse over to start the game!</span>
@@ -65,7 +68,7 @@
       <div class="packet">
         <div class="game-speed">
           <label for="game-speed">Select game speed:</label>
-          <br>
+          <br />
           <select id="game-speed" name="game-speed" onchange="changeGameSpeed()">
             <option value="1">1 - Fastest</option>
             <option value="2">2 - Fast</option>
@@ -76,10 +79,14 @@
         </div>
 
         <img id="packet" src="./images/packet.png" />
-        <p>Score: <span id="scoreSpan">0</span></p>
+        <div>
+          <p>High score: <span id="high-score-span">No previous score</span></p>
+
+          <p>Score: <span id="score-span">0</span></p>
+        </div>
       </div>
       <div id="packet-grid" class="packet-grid">
-        <!-- this will hold the images -->
+        <!-- this will hold the images added for each score -->
       </div>
     </div>
 
